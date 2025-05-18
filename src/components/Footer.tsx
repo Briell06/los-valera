@@ -19,7 +19,9 @@ function Footer() {
             <h2 className="-center text-4xl font-extrabold text-white transition">
               Los Varela
             </h2>
-            <p className="mt-2 text-sm">Construyendo grandes experiencias</p>
+            <p className="mt-2 text-sm">
+              Construyendo grandes experiencias juntos
+            </p>
           </div>
 
           <div className="mx-auto flex flex-col gap-4 font-bold md:flex-row md:gap-8">
