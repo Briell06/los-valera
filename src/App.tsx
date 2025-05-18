@@ -8,17 +8,17 @@ import Footer from "@/components/Footer.tsx";
 function App() {
   return (
     <div className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gradient-to-tr from-gray-900 via-gray-800 to-slate-800 text-white">
-      <NavBar />
-      <Main>
-        <Router>
+      <Router>
+        <NavBar />
+        <Main>
           <Routes>
             <Route element={<RootLayout />}>
               <Route path="/" element={<Home />} />
             </Route>
           </Routes>
-        </Router>
-      </Main>
-      <Footer />
+        </Main>
+        <Footer />
+      </Router>
     </div>
   );
 }

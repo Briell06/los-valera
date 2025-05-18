@@ -8,7 +8,7 @@ function NavBar() {
         <div className="flex items-center">
           <img src={logo} alt="logo" className={"h-16 w-16 rounded-full"} />
           <h3 className="font-poppins ms-4 hidden text-2xl md:block">
-            Los Valera
+            Los Varela
           </h3>
         </div>
         <div className="mx-5 flex-1">
