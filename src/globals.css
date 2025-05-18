@@ -2,7 +2,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
 
+@theme {
+    --color-light: #f2f2f2
+}
 
 @theme inline {
     /* Configure your theme variables here */
@@ -261,3 +265,12 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Custom utilities */
+@utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+
+

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer.tsx";
 
 function App() {
   return (
-    <div className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gradient-to-tr from-gray-900 via-gray-800 to-slate-800 text-white">
+    <div className="bg-light grid min-h-screen grid-rows-[auto_1fr_auto] text-white dark:bg-gradient-to-tr dark:from-gray-900 dark:via-gray-800 dark:to-slate-800">
       <Router>
         <NavBar />
         <Main>

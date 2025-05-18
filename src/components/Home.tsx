@@ -10,7 +10,7 @@ const Home = () => {
         { text: "Principales", className: "dark:text-slate-100" },
         {
           text: "Disponibles.",
-          className: "dark:text-blue-500",
+          className: "text-blue-500",
         },
       ]}
     />
