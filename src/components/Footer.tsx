@@ -1,6 +1,5 @@
 import { RiCopyrightFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { LinkPreview } from "@/components/ui/link-preview.tsx";
 import video from "@/assets/logo-video.mp4";
 
 function Footer() {
@@ -23,21 +22,26 @@ function Footer() {
             <p className="mt-2 text-sm">Construyendo grandes experiencias</p>
           </div>
 
-          <div className="mx-auto flex flex-col gap-4 md:flex-row md:gap-8">
+          <div className="mx-auto flex flex-col gap-4 font-bold md:flex-row md:gap-8">
             {/*   Nav Links   */}
-
-            <LinkPreview
-              className={"font-semibold"}
-              url={"https://los-varela.vercel.app"}
-            >
-              <Link to={"/"}>INICIO</Link>
-            </LinkPreview>
-            <LinkPreview className={"font-semibold"} url={"/productos"}>
-              <Link to={"/productos"}>SERVICIOS</Link>
-            </LinkPreview>
-            <LinkPreview className={"font-semibold"} url={"/contacto"}>
-              <Link to={"/contacto"}>CONTACTO</Link>
-            </LinkPreview>
+            <button className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <Link to={"/"}>INICIO</Link>
+              </div>
+            </button>{" "}
+            <button className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <Link to={"/contacto"}>CONTACTO</Link>
+              </div>
+            </button>{" "}
+            <button className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <Link to={"/productos"}>SERVICIOS</Link>
+              </div>
+            </button>
           </div>
         </div>
 

@@ -254,7 +254,7 @@
 @layer base {
     * {
         @apply border-border outline-ring/50;
-        font-family:  Montserrat, sans-serif;
+        font-family:   "Open Sans" ,sans-serif;
     }
 
     body {
