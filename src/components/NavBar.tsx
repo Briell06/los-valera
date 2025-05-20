@@ -1,22 +1,30 @@
 import logo from "../assets/Logo.jpg";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input.tsx";
+import { MoonIcon, SunIcon } from "lucide-react";
+
+const theme = true;
 
 function NavBar() {
   return (
-    <div className="container mx-auto mt-3">
-      <div className="mx-5 flex items-center justify-between rounded-3xl bg-gray-900 px-4 py-3 text-white shadow-lg shadow-black">
+    <div className="mx-4 mt-3">
+      <div className="flex items-center justify-between rounded-3xl bg-gray-900 px-3 py-3 text-white shadow-lg shadow-gray-700 dark:shadow-black">
         <div className="flex items-center">
           <img src={logo} alt="logo" className={"h-16 w-16 rounded-full"} />
-          <h3 className="font-poppins ms-4 hidden text-2xl text-white md:block">
+          <h3 className="font-montserrat ms-4 hidden text-2xl font-bold text-white sm:block">
             Los Varela
           </h3>
         </div>
-        <div className="mx-5 flex-1">
-          <PlaceholdersAndVanishInput
-            onChange={() => {}}
-            onSubmit={() => {}}
-            placeholders={["Buscar", "Encuentre su producto"]}
-          />
+        <div className="flex items-center justify-end gap-1">
+          <div className={""}>
+            <PlaceholdersAndVanishInput
+              onChange={() => {}}
+              onSubmit={() => {}}
+              placeholders={["Buscar", "Encuentre su producto"]}
+            />
+          </div>
+          <button className="rounded-full bg-transparent p-2 text-white duration-200 hover:bg-gray-800">
+            {theme ? <MoonIcon /> : <SunIcon />}
+          </button>
         </div>
       </div>
     </div>
