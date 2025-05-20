@@ -1,10 +1,15 @@
 import logo from "../assets/Logo.jpg";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input.tsx";
 import { MoonIcon, SunIcon } from "lucide-react";
-
-const theme = true;
+import useTheme from "@/hooks/useTheme.ts";
 
 function NavBar() {
+  const { theme, setTheme } = useTheme();
+
+  const handleTheme = (): void => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <div className="mx-4 mt-3">
       <div className="flex items-center justify-between rounded-3xl bg-gray-900 px-3 py-3 text-white shadow-lg shadow-gray-700 dark:shadow-black">
@@ -22,8 +27,11 @@ function NavBar() {
               placeholders={["Buscar", "Encuentre su producto"]}
             />
           </div>
-          <button className="rounded-full bg-transparent p-2 text-white duration-200 hover:bg-gray-800">
-            {theme ? <MoonIcon /> : <SunIcon />}
+          <button
+            onClick={handleTheme}
+            className="rounded-full bg-transparent p-2 text-white duration-200 hover:bg-gray-800"
+          >
+            {theme === "dark" ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
       </div>
