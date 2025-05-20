@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className="mx-4 mt-3">
       <div className="flex items-center justify-between rounded-3xl bg-gray-900 px-3 py-3 text-white shadow-lg shadow-gray-700 dark:shadow-black">
-        <div className="flex items-center">
+        <div className="flex basis-25 items-center">
           <img src={logo} alt="logo" className={"h-16 w-16 rounded-full"} />
           <h3 className="font-montserrat ms-4 hidden text-2xl font-bold text-white sm:block">
             Los Varela
