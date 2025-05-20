@@ -5,7 +5,7 @@ const words = [
   { text: "Principales", className: "dark:text-slate-100" },
   {
     text: "Disponibles.",
-    className: "text-blue-500",
+    className: "text-blue-500 dark:text-blue-500",
   },
 ];
 
