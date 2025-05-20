@@ -1,5 +1,5 @@
 import { RiCopyrightFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import video from "@/assets/logo-video.mp4";
 
 function Footer() {
@@ -26,24 +26,30 @@ function Footer() {
 
           <div className="mx-auto flex flex-col gap-4 font-bold md:flex-row md:gap-8">
             {/*   Nav Links   */}
-            <button className="relative p-[3px]">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
-                <Link to={"/"}>INICIO</Link>
-              </div>
-            </button>{" "}
-            <button className="relative p-[3px]">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
-                <Link to={"/contacto"}>CONTACTO</Link>
-              </div>
-            </button>{" "}
-            <button className="relative p-[3px]">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-              <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
-                <Link to={"/productos"}>SERVICIOS</Link>
-              </div>
-            </button>
+            <NavLink to={"/"}>
+              <button className="relative w-full p-[3px]">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                  INICIO
+                </div>
+              </button>
+            </NavLink>
+            <NavLink to={"/contacto"}>
+              <button className="relative w-full p-[3px]">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                  CONTACTO
+                </div>
+              </button>
+            </NavLink>
+            <NavLink to={"/productos"}>
+              <button className="relative w-full p-[3px]">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                  PRODUCTOS
+                </div>
+              </button>
+            </NavLink>
           </div>
         </div>
 

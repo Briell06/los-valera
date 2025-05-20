@@ -282,3 +282,6 @@
 
 
 
+.active .active-child{
+    @apply bg-transparent
+}

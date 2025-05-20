@@ -11,11 +11,14 @@ const words = [
 
 const Home = () => {
   return (
-    <TypewriterEffect
-      className="text-4xl"
-      cursorClassName="h-6 "
-      words={words}
-    />
+    <>
+      <TypewriterEffect
+        className="text-4xl"
+        cursorClassName="h-6"
+        words={words}
+      />
+      {/*<ComboCard />*/}
+    </>
   );
 };
 export default Home;

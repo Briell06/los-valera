@@ -1,14 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import type { Item } from "@/types/types";
 import axios from "axios";
-
-interface Item {
-  id: number;
-  nombre: string;
-  descripcion: string;
-  imagen: string;
-  categoria: string;
-  precio: number;
-}
 
 const useItemsQuery = () => {
   return useQuery<Item[], Error>({
