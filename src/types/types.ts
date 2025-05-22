@@ -5,6 +5,7 @@ export interface Combo {
   items: Item[];
   nombre: string;
   precio: string;
+  imagen: string;
 }
 
 export interface Item {

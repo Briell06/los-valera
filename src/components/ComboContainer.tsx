@@ -14,7 +14,11 @@ const ComboContainer = () => {
         <Loader />
       </div>
     );
-  return <div>{data?.map((combo) => <ComboCard combo={combo} />)}</div>;
+  return (
+    <div className="mx-auto mt-10 grid grid-cols-1 gap-4">
+      {data?.map((combo) => <ComboCard combo={combo} />)}
+    </div>
+  );
 };
 
 export default ComboContainer;

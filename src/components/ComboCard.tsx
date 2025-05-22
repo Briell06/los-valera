@@ -5,7 +5,11 @@ interface Props {
 }
 
 function ComboCard({ combo }: Props) {
-  return <div>{combo.nombre}</div>;
+  return (
+    <div className="mx-auto">
+      <img src={combo.imagen} alt="imagen del combo" />
+    </div>
+  );
 }
 
 export default ComboCard;
