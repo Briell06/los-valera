@@ -1,5 +1,5 @@
-import { TypewriterEffect } from "@/components/ui/typewriter-effect.tsx";
 import ComboContainer from "@/components/ComboContainer.tsx";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect.tsx";
 
 const words = [
   { text: "Combos", className: "dark:text-slate-100" },
@@ -12,7 +12,7 @@ const words = [
 
 const Home = () => {
   return (
-    <div className="h-screen text-black dark:text-white">
+    <div className="min-h-screen text-black dark:text-white">
       <TypewriterEffect
         className="text-4xl"
         cursorClassName="h-6"
