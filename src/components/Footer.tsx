@@ -29,7 +29,7 @@ function Footer() {
           <div className="mx-auto flex flex-col gap-4 font-bold md:flex-row md:gap-8">
             {/*   Nav Links   */}
             <NavLink to={"/"}>
-              <button className="relative w-full p-[3px]">
+              <button className="relative w-full rounded-4xl p-[3px]">
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-slate-700 dark:to-slate-800" />
                 <div className="group active-child relative rounded-[6px] bg-white px-8 py-2 text-blue-600 transition duration-200 hover:bg-transparent hover:text-white dark:bg-black dark:text-white">
                   INICIO
