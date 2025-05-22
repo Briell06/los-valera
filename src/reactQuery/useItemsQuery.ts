@@ -1,14 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import type { Item } from "@/types/types";
-import axios from "axios";
+import ApiClient from "@/services/apiClient.ts";
+
+const apiClient = new ApiClient<Item>("/items");
 
 const useItemsQuery = () => {
-  return useQuery<Item[], Error>({
+  return useQuery({
     queryKey: ["posts"],
-    queryFn: () =>
-      axios
-        .get<Item[]>("http://localhost:8000/db/items")
-        .then((res) => res.data),
+    queryFn: apiClient.getAll,
   });
 };
 

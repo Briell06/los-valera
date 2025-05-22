@@ -4,22 +4,24 @@ import video from "@/assets/logo-video.mp4";
 
 function Footer() {
   return (
-    <footer className="mt-auto bg-slate-900 py-8 text-center text-gray-300">
+    <footer className="mt-auto bg-gray-50 py-10 text-center text-gray-800 shadow-lg dark:bg-slate-900 dark:text-gray-300">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <div className="mb-4 md:mb-0">
-            <video
-              src={video}
-              className="mx-auto h-40 w-40 rounded-full"
-              width={100}
-              height={100}
-              autoPlay={true}
-              muted
-            />
-            <h2 className="-center text-4xl font-extrabold text-white transition">
+          <div className="mb-6 md:mb-0">
+            <div className="overflow-hidden rounded-full">
+              <video
+                src={video}
+                className="mx-auto h-40 w-40 rounded-full object-cover"
+                width={100}
+                height={100}
+                autoPlay={true}
+                muted
+              />
+            </div>
+            <h2 className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-4xl font-extrabold text-transparent transition dark:from-blue-400 dark:to-indigo-300">
               Los Varela
             </h2>
-            <p className="mt-2 text-sm">
+            <p className="mt-2 text-sm font-medium text-gray-600 dark:text-gray-300">
               Construyendo grandes experiencias juntos
             </p>
           </div>
@@ -28,24 +30,24 @@ function Footer() {
             {/*   Nav Links   */}
             <NavLink to={"/"}>
               <button className="relative w-full p-[3px]">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-slate-700 dark:to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-white px-8 py-2 text-blue-600 transition duration-200 hover:bg-transparent hover:text-white dark:bg-black dark:text-white">
                   INICIO
-                </div>
-              </button>
-            </NavLink>
-            <NavLink to={"/contacto"}>
-              <button className="relative w-full p-[3px]">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
-                  CONTACTO
                 </div>
               </button>
             </NavLink>
             <NavLink to={"/productos"}>
               <button className="relative w-full p-[3px]">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-700 to-slate-800" />
-                <div className="group active-child relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-slate-700 dark:to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-white px-8 py-2 text-blue-600 transition duration-200 hover:bg-transparent hover:text-white dark:bg-black dark:text-white">
+                  PRODUCTOS
+                </div>
+              </button>
+            </NavLink>
+            <NavLink to={"/contacto"}>
+              <button className="relative w-full p-[3px]">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-slate-700 dark:to-slate-800" />
+                <div className="group active-child relative rounded-[6px] bg-white px-8 py-2 text-blue-600 transition duration-200 hover:bg-transparent hover:text-white dark:bg-black dark:text-white">
                   PRODUCTOS
                 </div>
               </button>
@@ -53,24 +55,29 @@ function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 border-gray-700" />
+        <hr className="my-8 border-gray-200 dark:border-gray-700" />
 
         <div className="flex flex-col items-center justify-between text-sm md:flex-row">
-          <p>
-            {<RiCopyrightFill className="inline" />} {new Date().getFullYear()}{" "}
-            <span className="font-bold">Los Varela</span>. Todos los derechos
-            reservados.
+          <p className="text-gray-600 dark:text-gray-300">
+            {
+              <RiCopyrightFill className="inline text-blue-500 dark:text-gray-300" />
+            }{" "}
+            {new Date().getFullYear()}{" "}
+            <span className="font-bold text-blue-600 dark:text-gray-300">
+              Los Varela
+            </span>
+            . Todos los derechos reservados.
           </p>
-          <div className="mt-4 flex gap-4 md:mt-0">
+          <div className="mt-4 flex gap-6 md:mt-0">
             <a
               href="#"
-              className="transition-colors duration-300 hover:text-white"
+              className="text-gray-500 transition-colors duration-300 hover:text-blue-600 dark:hover:text-white"
             >
               Términos y Condiciones
             </a>
             <a
               href="#"
-              className="transition-colors duration-300 hover:text-white"
+              className="text-gray-500 transition-colors duration-300 hover:text-blue-600 dark:hover:text-white"
             >
               Política de Privacidad
             </a>
