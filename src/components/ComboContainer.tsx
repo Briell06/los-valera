@@ -6,7 +6,7 @@ const ComboContainer = () => {
   const { data, error, isLoading } = useCombosQuery();
   if (error)
     return (
-      <h1 className="text-destructive mx-auto text-center">{error.message}</h1>
+      <p className="text-destructive mx-auto text-center">{error.message}</p>
     );
   if (isLoading)
     return (

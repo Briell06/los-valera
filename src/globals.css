@@ -277,5 +277,6 @@
 }
 
 .active .active-child {
-  @apply bg-transparent;
+  @apply bg-transparent text-blue-950;
 }
+
