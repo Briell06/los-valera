@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000/api/",
+  baseURL: "https://losvareladb.pythonanywhere.com/api/",
 });
 
 class ApiClient<T> {
