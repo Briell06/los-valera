@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000/db/",
+  baseURL: "http://localhost:8000/api/",
 });
 
 class ApiClient<T> {
@@ -13,6 +13,11 @@ class ApiClient<T> {
 
   async getAll() {
     const res = await axiosInstance.get<T[]>(this.endpoint);
+    return res.data;
+  }
+
+  async getOne(id: number) {
+    const res = await axiosInstance.get<T>(`${this.endpoint}/${id}`);
     return res.data;
   }
 }

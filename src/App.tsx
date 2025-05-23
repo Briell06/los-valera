@@ -1,9 +1,10 @@
+import Footer from "@/components/Footer.tsx";
 import Main from "@/components/Main.tsx";
 import NavBar from "@/components/NavBar.tsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ComboDetail from "@/pages/ComboDetail.tsx";
+import Home from "@/pages/Home.tsx";
 import RootLayout from "@/pages/root/RootLayout.tsx";
-import Home from "@/components/Home.tsx";
-import Footer from "@/components/Footer.tsx";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route element={<RootLayout />}>
               <Route path="/" element={<Home />} />
+              <Route path="/combos/:id" element={<ComboDetail />} />
             </Route>
           </Routes>
         </Main>

@@ -4,7 +4,7 @@ export interface Combo {
   id: number;
   items: Item[];
   nombre: string;
-  precio: string;
+  precio: number;
   imagen: string;
 }
 
@@ -15,6 +15,4 @@ export interface Item {
   descripcion: string;
   imagen: string;
   precio: number;
-  created_at: Date;
-  updated_at: Date;
 }
